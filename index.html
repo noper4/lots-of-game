@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Ragdoll Lab — 2D Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ragdoll Lab home"><span class="brand-mark">R</span><span>RAGDOLL <b>LAB</b></span></a>
+      <div class="top-note"><span class="live-dot"></span> PHYSICS PLAYGROUND</div>
+      <button class="icon-button" id="help-button" aria-label="Show controls" title="Controls">?</button>
+    </header>
+
+    <section class="intro">
+      <div><p class="eyebrow">A LITTLE SANDBOX FOR BIG FLIPS</p><h1>Ragdoll <span>Playground</span></h1><p class="subtitle">Grab a limb, give them a shove, and see what happens.</p></div>
+      <div class="stats"><span class="stat-label">RAGDOLLS</span><strong id="ragdoll-count">01</strong></div>
+    </section>
+
+    <section class="stage-wrap" aria-label="Game playground">
+      <div class="stage-toolbar"><span><i class="status-dot"></i> <span id="status-text">PLAYING</span></span><span class="stage-hint">DRAG THE RAGDOLL TO PLAY</span><span class="coordinates" id="coordinates">X 000 · Y 000</span></div>
+      <canvas id="game" aria-label="2D ragdoll physics playground" tabindex="0"></canvas>
+      <div class="canvas-tip" id="canvas-tip"><span class="tip-icon">↖</span> Grab and toss the ragdoll</div>
+    </section>
+
+    <nav class="controls" aria-label="Game controls">
+      <button class="control-button primary" id="spawn-button"><span class="button-icon">＋</span><span>New ragdoll</span><kbd>R</kbd></button>
+      <button class="control-button" id="push-button"><span class="button-icon">↗</span><span>Big shove</span><kbd>SPACE</kbd></button>
+      <button class="control-button" id="gravity-button"><span class="button-icon">↓</span><span>Gravity: on</span></button>
+      <button class="control-button" id="pause-button"><span class="button-icon">Ⅱ</span><span>Pause</span><kbd>P</kbd></button>
+      <button class="control-button reset-button" id="reset-button"><span class="button-icon">↺</span><span>Reset</span></button>
+    </nav>
+
+    <footer><span>MADE FOR MESSING AROUND <span class="footer-heart">♥</span></span><span>NO WRONG WAY TO PLAY</span></footer>
+  </main>
+  <dialog id="help-dialog"><button class="dialog-close" id="close-help" aria-label="Close">×</button><p class="eyebrow">QUICK GUIDE</p><h2>Make a little chaos.</h2><ul><li><b>Drag</b> any body part to fling the ragdoll.</li><li><b>New ragdoll</b> or press <kbd>R</kbd> to add another.</li><li><b>Big shove</b> or press <kbd>Space</kbd> for a surprise.</li><li><b>Pause</b> or press <kbd>P</kbd> to freeze the action.</li></ul><p class="dialog-note">Tip: you can play with multiple ragdolls at once.</p></dialog>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
